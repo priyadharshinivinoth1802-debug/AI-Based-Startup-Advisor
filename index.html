@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Business Advisor for Startups</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="#" class="brand">
+            <div class="brand-icon">
+                🤖
+            </div>
+
+            <span>Startup<span class="green">Advisor</span></span>
+        </a>
+
+        <div class="nav-text">
+            AI Business Advisor
+        </div>
+
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                STARTUP BUSINESS ADVISOR
+            </div>
+
+            <h1>
+                Have a business
+                <span>idea?</span>
+            </h1>
+
+            <p>
+                Tell us about your startup idea, your target customers,
+                budget, and goals. Our AI advisor will help you create
+                a practical plan to move forward.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Main Form -->
+    <main class="form-wrapper">
+
+        <div class="form-card">
+
+            <div class="form-header">
+
+                <div>
+
+                    <span class="form-label">
+                        STARTUP INFORMATION
+                    </span>
+
+                    <h2>
+                        Tell us about your startup idea
+                    </h2>
+
+                    <p>
+                        Answer a few simple questions so we can understand
+                        your business idea and provide useful guidance.
+                    </p>
+
+                </div>
+
+                <div class="step-indicator">
+                    <strong id="progressText">0%</strong>
+                    <span>Complete</span>
+                </div>
+
+            </div>
+
+
+            <!-- Progress -->
+            <div class="progress-track">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar">
+                </div>
+
+            </div>
+
+
+            <form id="businessForm">
+
+
+                <!-- Founder Name -->
+                <div class="form-group">
+
+                    <label for="founderName">
+                        Founder Name
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="founderName"
+                        name="founderName"
+                        placeholder="e.g. Jothilakshmi"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <small>
+                        Your business advice can be sent to this email.
+                    </small>
+
+                </div>
+
+
+                <!-- Business Idea -->
+                <div class="form-group">
+                    <label for="businessIdea">What business do you want to start? <span>*</span></label>
+                    <textarea id="businessIdea" name="businessIdea"
+                        placeholder="Example: I want to start a healthy homemade food delivery service for college students."
+                        required></textarea>
+                    <div class="character-count"><span id="ideaCount">0</span> characters</div>
+                </div>
+
+                <!-- Problem -->
+                <div class="form-group">
+                    <label for="problemSolved">What customer problem will your business solve? <span>*</span></label>
+                    <textarea id="problemSolved" name="problemSolved"
+                        placeholder="Example: Students need affordable, hygienic food near their college."
+                        required></textarea>
+                </div>
+
+                <!-- Target Customers -->
+                <div class="form-group">
+                    <label for="targetCustomers">Who are your main target customers? <span>*</span></label>
+                    <textarea id="targetCustomers" name="targetCustomers"
+                        placeholder="Example: College students aged 18–25 in Chennai."
+                        required></textarea>
+                </div>
+
+                <!-- Industry -->
+                <div class="form-group">
+                    <label for="industry">Which industry does your startup belong to? <span>*</span></label>
+                    <select id="industry" name="industry" required>
+                        <option value="">Select an industry</option>
+                        <option>Technology</option><option>E-commerce</option><option>Food & Beverage</option>
+                        <option>Healthcare</option><option>Education</option><option>Finance</option>
+                        <option>Retail</option><option>Travel & Tourism</option><option>Agriculture</option>
+                        <option>Fashion</option><option>Professional Services</option><option>Other</option>
+                    </select>
+                </div>
+
+                <!-- Business Model -->
+                <div class="form-group">
+                    <label for="businessModel">How will customers buy your product/service? <span>*</span></label>
+                    <select id="businessModel" name="businessModel" required>
+                        <option value="">Select a business model</option>
+                        <option>Online</option><option>Offline</option><option>Online & Offline</option>
+                        <option>Subscription</option><option>Marketplace</option><option>Service-based</option>
+                    </select>
+                </div>
+
+                <!-- Location -->
+                <div class="form-group">
+                    <label for="location">Where will you launch the business? <span>*</span></label>
+                    <input type="text" id="location" name="location" placeholder="e.g. Chennai, Tamil Nadu" required>
+                </div>
+
+                <!-- Startup Stage -->
+                <div class="form-group">
+                    <label for="startupStage">What is your current startup stage? <span>*</span></label>
+                    <select id="startupStage" name="startupStage" required>
+                        <option value="">Select startup stage</option>
+                        <option>Idea Stage</option><option>MVP / Prototype</option><option>Pre-launch</option>
+                        <option>Recently Launched</option><option>Early Growth</option>
+                    </select>
+                </div>
+
+                <!-- Budget -->
+                <div class="form-group">
+                    <label for="budget">What is your estimated starting budget? <span>*</span></label>
+                    <select id="budget" name="budget" required>
+                        <option value="">Select your budget</option>
+                        <option>Below ₹50,000</option><option>₹50,000 - ₹1 Lakh</option>
+                        <option>₹1 Lakh - ₹5 Lakh</option><option>₹5 Lakh - ₹10 Lakh</option>
+                        <option>Above ₹10 Lakh</option><option>Not Decided</option>
+                    </select>
+                </div>
+
+                <!-- Customers -->
+                <div class="form-group">
+                    <label for="customers">What is your current customer traction? <span>*</span></label>
+                    <select id="customers" name="customers" required>
+                        <option value="">Select customer traction</option>
+                        <option>No Customers</option><option>Few Customers</option>
+                        <option>Growing Customer Base</option>
+                    </select>
+                </div>
+
+                <!-- Funding -->
+                <div class="form-group">
+                    <label for="funding">How do you plan to fund the startup? <span>*</span></label>
+                    <select id="funding" name="funding" required>
+                        <option value="">Select funding situation</option>
+                        <option>Self Funded</option><option>Investor Funded</option>
+                        <option>Loan</option><option>Looking for Funding</option><option>Not Decided</option>
+                    </select>
+                </div>
+
+                <!-- USP -->
+                <div class="form-group">
+                    <label for="usp">What makes your idea different from existing options? <span>*</span></label>
+                    <textarea id="usp" name="usp"
+                        placeholder="Example: Home-cooked meals, student-friendly pricing and same-day delivery."
+                        required></textarea>
+                </div>
+
+                <!-- Goal -->
+                <div class="form-group">
+                    <label for="businessGoal">What is your main business goal right now? <span>*</span></label>
+                    <select id="businessGoal" name="businessGoal" required>
+                        <option value="">Select your main goal</option>
+                        <option>Validate My Idea</option><option>Start Business</option>
+                        <option>Find Customers</option><option>Marketing Strategy</option>
+                        <option>Competitor Analysis</option><option>Find Funding</option><option>Business Plan</option>
+                    </select>
+                </div>
+
+                <!-- Advice Type -->
+                <div class="form-group">
+                    <label for="adviceType">Which area needs the most guidance? <span>*</span></label>
+                    <select id="adviceType" name="adviceType" required>
+                        <option value="">Select advice type</option>
+                        <option>Business Strategy</option><option>Marketing</option>
+                        <option>Customer Acquisition</option><option>Pricing</option>
+                        <option>Competition</option><option>Funding</option>
+                        <option>Product Strategy</option><option>All</option>
+                    </select>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="form-group">
+                    <label for="additionalInfo">Anything else the AI advisor should know?</label>
+                    <textarea id="additionalInfo" name="additionalInfo"
+                        placeholder="Add constraints, resources, experience, timeline or other useful details..."></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="submit-area">
+
+                    <button
+                        type="submit"
+                        id="submitButton"
+                        class="submit-button"
+                    >
+
+                        Get My Startup Advice
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </button>
+
+                    <p class="privacy-text">
+                        Your information will be used to understand your
+                        startup idea and generate personalized business guidance.
+                    </p>
+
+                </div>
+
+            </form>
+
+
+            <!-- AI Advice Result -->
+            <div class="success-screen" id="successScreen">
+                <div class="success-icon">✓</div>
+                <div class="success-badge">ALGORITHMIC STARTUP ANALYSIS</div>
+                <h2 id="resultTitle">Your Startup Advice</h2>
+                <p id="resultSummary">Your analysis is ready.</p>
+
+                <div class="score-card">
+                    <div class="score-top">
+                        <div class="score-gauge" id="scoreGauge" aria-label="Startup readiness score">
+                            <div class="score-gauge-inner">
+                                <strong id="gaugeScore">--</strong>
+                                <span>/100</span>
+                            </div>
+                        </div>
+                        <div class="score-heading">
+                            <span class="score-label">STARTUP READINESS SCORE</span>
+                            <div><strong id="readinessScore">--</strong><span class="score-out-of">/100</span></div>
+                        </div>
+                    </div>
+                    <div class="score-bar"><span id="scoreFill"></span></div>
+                    <div class="score-level" id="scoreLevel">Assessment</div>
+                    <p id="scoreExplanation"></p>
+
+                    <div class="breakdown-title">Score Breakdown</div>
+                    <div class="score-breakdown" id="scoreBreakdown"></div>
+                    <div class="method-note">Method: Weighted Scoring Algorithm + Rule-Based Decision Logic</div>
+                </div>
+                <div class="priority-card">
+                    <div class="priority-header">
+                        <div>
+                            <span class="section-kicker">NEXT PRIORITIES</span>
+                            <h3>What should you improve first?</h3>
+                        </div>
+                        <span class="priority-count" id="priorityCount">0 priorities</span>
+                    </div>
+                    <div class="priority-list" id="priorityList"></div>
+                </div>
+
+                <div class="advice-grid">
+                    <div class="advice-section"><h3>💡 Business Idea Analysis</h3><p id="ideaAnalysis"></p></div>
+                    <div class="advice-section"><h3>🎯 Target Customers</h3><p id="customerAnalysis"></p></div>
+                    <div class="advice-section"><h3>📊 Market Opportunity</h3><p id="marketAnalysis"></p></div>
+                    <div class="advice-section"><h3>🏆 Competitor Considerations</h3><p id="competitorAnalysis"></p></div>
+                    <div class="advice-section"><h3>💰 Budget & Revenue</h3><p id="budgetAnalysis"></p></div>
+                    <div class="advice-section"><h3>⚠️ Possible Risks</h3><p id="riskAnalysis"></p></div>
+                    <div class="advice-section"><h3>📢 Marketing Suggestions</h3><p id="marketingAnalysis"></p></div>
+                    <div class="advice-section"><h3>🚀 Recommended First Steps</h3><p id="firstSteps"></p></div>
+                    <div class="advice-section wide"><h3>📅 30-Day Action Plan</h3><p id="actionPlan"></p></div>
+                </div>
+
+                <div class="result-actions">
+                    <button type="button" class="print-button" id="printButton">🖨️ Print / Save Report</button>
+                    <button type="button" class="another-button" id="anotherButton">
+                        Start New Startup Assessment
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Bottom CTA -->
+    <section class="bottom-section">
+
+        <div class="bottom-content">
+
+            <span>
+                READY TO START?
+            </span>
+
+            <h2>
+                Your idea. Your startup. Your next step.
+            </h2>
+
+            <p>
+                Share your business idea and get structured guidance
+                to help you plan your next steps.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-brand">
+            🤖 Startup<span>Advisor</span>
+        </div>
+
+        <p>
+            AI-Based Business Advisor for Startups
+        </p>
+
+        <small>
+            © 2026 Startup Advisor. All rights reserved.
+        </small>
+
+    </footer>
+
+
+    <script src="engine.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
